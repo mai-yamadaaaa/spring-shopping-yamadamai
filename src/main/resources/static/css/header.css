@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+header{
+	background-color:#383c3c;
+	color: #ffffff;
+	padding-top: 10px;
+	padding-left: 20px;	
+	display: flex;
+	justify-content: space-between;
+}
+
+header h1{
+	text-align:left;
+}
+
+.sample{
+	text-decoration: none;
+}
+
+a{
+	color: #ffffff;
+}
+
+.account-login{
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: flex-end;
+	flex-direction: column;
+	justify-content: flex-end;
+	padding-right: 10px;
+}
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Confirmation</title>
+<link rel="stylesheet" type="text/css" href="/css/items.css">
+</head>
+<body>
+	<header th:replace="header"></header>
+	<main>
+		<div class="heading">
+			<h3>ご注文商品</h3>
+		</div>
+		<span th:replace="cartItem"></span>
+		<div class="heading">
+			<h3>お客様情報確認</h3>
+		</div>
+		<form class="item-table" action="/order" method="post">
+			<table align="center">
+				<tr>
+					<th class="customer-column">お名前</th>
+					<td class="customer-text" th:text="${customer.name}"></td>
+				</tr>
+				<tr>
+					<th class="customer-column">住所</th>
+					<td class="customer-text" th:text="${customer.address}"></td>
+				</tr>
+				<tr>
+					<th class="customer-column">電話番号</th>
+					<td class="customer-text" th:text="${customer.tel}"></td>
+				</tr>
+				<tr>
+					<th class="customer-column">e-mail</th>
+					<td class="customer-text" th:text="${customer.email}"></td>
+				</tr>
+			</table>
+			<input type="hidden" name="name" th:value="${customer.name}">
+			<input type="hidden" name="address" th:value="${customer.address}">
+			<input type="hidden" name="tel" th:value="${customer.tel}">
+			<input type="hidden" name="email" th:value="${customer.email}">
+			<button class="orderConfirm-button">この内容で注文</button>
+		</form>
+	</main>
+	<hr>
+	<footer th:replace="footer"></footer>
+</body>
+</html>

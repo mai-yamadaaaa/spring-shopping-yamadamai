@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>商品一覧</title>
+	<link rel="stylesheet" type="text/css" href="/css/items.css">
+</head>
+
+<body>
+	<header th:replace="header"></header>
+	<nav>
+		<div class="item-link">
+			<a href="/items">全商品</a>
+			<a th:each="c:${categories}" th:href="@{/items(categoryId=${c.id})}">
+				<span th:text="${c.name}" style="padding-left:10px;"></span>
+			</a>
+		</div>
+		<div class="cartIn-link">
+			<a href="/cart">カートを見る</a>
+		</div>
+	</nav>
+	<main class="item-table">
+		<table align="center"> <!--tableタグを中央寄せ-->
+			<tr>
+				<th class="no-column">NO</th>
+				<th class="item-column">商品名</th>
+				<th class="price-column">値段</th>
+				<th class="cartButton-column"></th>
+			</tr>
+			<tr th:each="item:${items}">
+				<td th:text="${item.id}"></td>
+				<td class="td-name" th:text="${item.name}"></td>
+				<td th:text="${#numbers.formatInteger(item.price, 3, 'COMMA')}+ '円'"></td>
+				<td class="td-button">
+					<form action="/cart/add" method="post">
+						<input type="hidden" name="itemId" th:value="${item.id}">
+						<button class="cartIn-button">カートに追加</button>
+					</form>
+				</td>
+			</tr>
+		</table>
+	</main>
+	<hr>
+	<footer th:replace="footer"></footer>
+</body>
+
+</html>

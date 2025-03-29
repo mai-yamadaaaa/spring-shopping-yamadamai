@@ -1,0 +1,171 @@
+@charset "UTF-8";
+
+
+/*共通部分*/
+/*共有ファイル　items,cart,cartItem,customerForm,orderConfirm*/
+body{
+	background-color: rgb(198, 199, 201);
+	margin: 0;
+	padding: 0;
+	text-align: center; /*	全体的に中心によせておく*/
+}
+nav{
+/*	text-align: left; 一部だけ左よせ*/
+	margin-top: 5px;
+	margin-bottom: 5px;
+	background-color: rgb(101, 101, 101);
+	display: flex;
+	flex-wrap: nowrap;	
+	justify-content: space-between;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.item-link{
+	padding-left:10px ;
+}
+
+.cartIn-link{
+	padding-right: 10px;
+}
+
+.heading{
+	text-align: left;
+	margin-left: 250px;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+h3{
+	margin-top: 30px;
+	margin-bottom: 2px;
+}
+
+table{
+	width: 90%;
+	height: 100px;
+	background-color: white;
+}
+
+.item-table{
+	padding-top: 0;
+	margin-left: 200px;
+	margin-right: 200px;
+	margin-top: 0;
+}
+
+/*table,th,tdに枠線をつける*/
+table,th,td{
+	border-collapse: collapse; /*枠線同志の隙間を潰す*/
+	border: 1px solid black;
+}
+
+/*itemテーブルの商品名*/
+.td-name{
+	text-align: left; /*一部だけ左よせ*/
+	padding-left: 10px;
+}
+
+th{
+	background-color: #383c3c;
+	color: white;
+}
+
+.no-column{
+	width: 8%;
+}
+
+.item-column{
+	width: 55%;
+}
+
+.price-column{
+	width: 20%;
+}
+
+.cartButton-column{
+	width: 17%;
+}
+
+
+.td-button{
+	width: 150px;
+}
+
+button{
+	background-color:#383c3c ;
+	color: white;
+	padding:7px 20px;
+	border: none;
+}
+
+/*ボタンにカーソルを合わせた時*/
+button:hover{
+	background-color:#007bbb;
+}
+
+/*カートに追加ボタン*/
+.cartIn-button{
+	width: 99%;
+}
+
+/*注文ボタン*/
+.orderOn-button{
+	padding: 10px 40px;
+	margin-top: 10px;
+}
+
+/*削除ボタン*/
+.delete-button{
+	width: 98%;
+}
+
+.delete-button:hover{
+	background-color: #b7282e;
+}
+
+.order-button{
+	text-align: center;
+}
+
+/*確認画面ボタン*/
+.confirm-button{
+	margin-top: 10px;
+	padding: 10px 40px;
+}
+
+.orderConfirm-button{
+	margin-top: 10px;
+	padding: 10px 40px;
+}
+
+.txt-box{
+	text-align: center;
+}
+
+.text{
+	width: 98%;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin: 2px;
+}
+
+.td-totalPrice{
+	text-align: right;
+}
+
+.td-totalPrice{
+	padding-right:20px ;
+}
+.customer-column{
+	width: 30%;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.customer-text{
+	text-align: left;
+	padding-left: 20px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}

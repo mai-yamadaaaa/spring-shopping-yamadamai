@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Cart</title>
+<link rel="stylesheet" type="text/css" href="/css/items.css">
+</head>
+<body>
+	<header th:replace="header"></header>
+	<main>
+		<div class="heading">
+		<h3>カート商品</h3>
+		</div>
+		<span class="item-tabale" th:replace="cartItem"></span>
+		<div class="order-button">
+		<form action="/order">
+			<button class="orderOn-button">注文する</button>
+		</form>
+		</div>
+	</main>
+	<hr>
+	<footer th:replace="footer"></footer>
+</body>
+</html>
